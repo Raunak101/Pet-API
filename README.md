@@ -14,6 +14,15 @@ Similarly convert-excel-to-json is helping us to parse the input Excel File stre
 fs {file-system} module is used to help us interact with the File architecture inside. Mongoose on the next is an ODM providing a connection between Node.js & MongoDB. Lastly, express-fileupload is a middleware enabling us to handle uploading of file & further actions like accessing there metadata & saving them.
  
   
+## Approach Taken
+-> As an excel file is coming as an input, it will be received as a POST request on API.
+-> Now parsing will be done of the file after taking it from the body of Request.
+-> After that as a Mongo Schema is defined already, the read data object will be passed after creating a new Instance of the table.
+-> Next, to see data , our API will take a GET request & show data in DB either by any specific URL parameter or the whole data in DB.
+-> For updating the value, a PATCH request will be accepted by our API with the new/updated data in request body.
+-> Deletion will be done in basis of a passed URL argument.
+-> Major safety concern & Error Handling are handled.
+
 
 ## To Run on Localhost
 
